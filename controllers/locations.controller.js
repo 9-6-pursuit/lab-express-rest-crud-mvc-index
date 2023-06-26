@@ -1,11 +1,9 @@
 const express = require("express");
-const locations = express();
-const locationsArray = require("../models/location.model.js")
+const router = express.Router();
+const locationsArray = require("../models/location.model.js");
 
-
-locations.get("/",(req, res)=> {
-    resizeBy.json(locationsArray);
+router.get("/", (req, res) => {
+  res.json(locationsArray);
 });
 
-
-module.exports = locations;
+module.exports = router;
