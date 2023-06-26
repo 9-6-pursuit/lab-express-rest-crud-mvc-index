@@ -1,4 +1,4 @@
-[
+const locationModel = [
     {
       street: "45 Davis Street",
       city: "Long Island City",
@@ -12,3 +12,12 @@
       zip: "11011",
     },
   ];
+  
+  function index() {
+    return locationModel;
+  }
+  
+  module.exports = {
+    index,
+  };
+  
