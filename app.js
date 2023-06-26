@@ -12,14 +12,14 @@ app.get("/", (req, res) => {
 });
 
 const locationsController = require("./controllers/locations.controller.js");
-app.use("/locations", locationsController.router);
+app.use("/locations", locationsController);
 
 const machinesController = require("./controllers/machines.controller.js");
-app.use("/machines", machinesController.router);
+app.use("/machines", machinesController);
 
 // 404 PAGE
 app.get("*", (req, res) => {
-    res.status(404).json({ error: "Page not found" });
+  res.status(404).json({ error: "Page not found" });
 });
 
 // EXPORT

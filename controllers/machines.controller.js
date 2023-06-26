@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
+const machinesArray = require("../models/location.model.js");
 
-// Define your routes and middleware for each controller
+router.get("/", (req, res) => {
+  res.json(machinesArray);
+});
 
-module.exports = {
-  router: router
-};
+module.exports = router;

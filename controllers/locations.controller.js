@@ -1,8 +1,11 @@
 const express = require("express");
-const router = express.Router();
+const locations = express();
+const locationsArray = require("../models/location.model.js")
 
-// Define your routes and middleware for each controller
 
-module.exports = {
-  router: router
-};
+locations.get("/",(req, res)=> {
+    resizeBy.json(locationsArray);
+});
+
+
+module.exports = locations;
