@@ -50,7 +50,7 @@ app.get("/machines", (req, res) => {
 // Person Model
 const personModel = require("./models/person.model.js");
 // Index route for Person Model
-app.get("/persons", (req, res) => {
+app.get("/people", (req, res) => {
   const persons = personModel.index();
   res.json(persons);
 });

@@ -1,4 +1,4 @@
-const locationModel = [
+module.exports = [
     {
       street: "45 Davis Street",
       city: "Long Island City",
@@ -12,12 +12,4 @@ const locationModel = [
       zip: "11011",
     },
   ];
-  
-  function index() {
-    return locationModel;
-  }
-  
-  module.exports = {
-    index,
-  };
   
