@@ -11,19 +11,19 @@ app.get("/", (req, res) => {
   res.send("Hello, world!");
 });
 
-const locationsController = require("./controllers/locations.controller")
+const locationsController = require("./Controllers/locations.contollers")
 app.use("/locations", locationsController)
 
-const machinesController = require("./controllers/machines.controller")
+const machinesController = require("./Controllers/machines.controller")
 app.use("/machines", machinesController)
 
-const personsController = require("./controllers/persons.controller")
+const personsController = require("./Controllers/persons.controller")
 app.use("/persons", personsController)
 
-const plansController = require("./controllers/plans.controller")
+const plansController = require("./Controllers/plans.controller")
 app.use("/plans", plansController)
 
-const specialEventsController = require("./controllers/special-events.controller")
+const specialEventsController = require("./Controllers/special-events.controllers")
 app.use("/special-events", specialEventsController)
 
 
