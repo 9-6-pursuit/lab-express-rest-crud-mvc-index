@@ -3,18 +3,43 @@ const express = require("express");
 
 // CONFIGURATION
 const app = express();
-const bookmarksController = require("./controllers/bookmarksController.js");
-app.use("/bookmarks", bookmarksController);
+
+const locationsController = require("./controllers/locationsController.js");
+app.use("/locations", locationsController);
+
+const machinesController = require("./controllers/machinesController.js");
+app.use("/machines", machinesController);
+
+const personsController = require("./controllers/personsController.js");
+app.use("/persons", personsController);
+
+const plansController = require("./controllers/plansController.js");
+app.use("/plans", plansController);
+
+const specialEventsController = require("./controllers/specialEventsController.js");
+app.use("/special-events", specialEventsController);
 
 // ROUTES
 app.get("/", (req, res) => {
-  res.send("Welcome to Bookmarks App");
+  res.send(
+ `<div>
+    <h1> Hello World!</h1>
+    <ul>
+        <li> <a href="/bookmarks">Bookmarks</a></li>
+    </ul>
+    <style>
+        body {
+            background: pink;
+        }
+    </style>
+ </div>`
+  );
 });
 
 // 404 PAGE
 app.get("*", (req, res) => {
-    res.status(404).json({ error: "Page not found" });
-  });
+    res.status(404).send("Sorry, no page found." );
+});
 
 // EXPORT
 module.exports = app;
